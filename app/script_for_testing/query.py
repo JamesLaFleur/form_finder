@@ -3,7 +3,7 @@ from request import request
 REQUEST_URL = "http://127.0.0.1:8000/myapp/"
 
 EXISTING_FORM_WITH_ONE_FIELD = {
-    "email": "tester@gmail.com"
+    "your_email": "tester@gmail.com"
 }
 
 EXISTING_FORM_WITH_MANY_FIELDS = {
@@ -46,22 +46,22 @@ result3 = request(REQUEST_URL, "POST", {"query": create_query(EXISTING_FORM_WITH
 result4 = request(REQUEST_URL, "POST", {"query": create_query(FORM_NOT_EXISTS)})
 
 print("--------------------------------------")
-print(f"{'\033[92m'}START TESTING FORM PARSER{'\033[92m'}")
+print("START TESTING FORM PARSER")
 
 print("-----")
-print(f"{'\033[96m'}EXISTING_FORM_WITH_ONE_FIELD:" + result1.body)
-print("-----")
-
-print("-----")
-print(f"{'\033[96m'}EXISTING_FORM_WITH_MANY_FIELDS:" + result2.body)
+print("EXISTING_FORM_WITH_ONE_FIELD:" + result1.body)
 print("-----")
 
 print("-----")
-print(f"{'\033[96m'}EXISTING_FORM_WITH_MANY_FIELDS_EN_DATE:" + result3.body)
+print("EXISTING_FORM_WITH_MANY_FIELDS:" + result2.body)
 print("-----")
 
 print("-----")
-print(f"{'\033[96m'}FORM_NOT_EXISTS:" + result4.body)
+print("EXISTING_FORM_WITH_MANY_FIELDS_EN_DATE:" + result3.body)
+print("-----")
+
+print("-----")
+print("FORM_NOT_EXISTS:" + result4.body)
 print("--------------------------------------")
 
-print(f"{'\033[93m'}TESTING FINISHED")
+print("TESTING FINISHED")
