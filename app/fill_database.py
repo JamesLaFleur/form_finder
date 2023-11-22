@@ -1,4 +1,4 @@
-new_form: list[dict] = [
+new_form: list[dict[str, str]] = [
     {
         "name": "Application form",
         "your_email": "email",

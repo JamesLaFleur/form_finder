@@ -10,10 +10,7 @@ class Response(typing.NamedTuple):
 
     def json(self) -> typing.Any:
         """
-        Decode body's JSON.
-
-        Returns:
-            Pythonic representation of the JSON object
+        Конвертирует тело response в JSON
         """
         try:
             output = json.loads(self.body)

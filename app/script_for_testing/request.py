@@ -38,18 +38,9 @@ def request(
         else:
             request_data = urllib.parse.urlencode(data).encode()
 
-    print("REQ DATA", request_data)
-    print("URL", url)
-
     httprequest = urllib.request.Request(
         url, data=request_data, headers=headers, method=method
     )
-
-    print("REQ", httprequest)
-
-    res = urllib.request.urlopen(url)
-
-    print("REs", res)
 
     try:
         with urllib.request.urlopen(httprequest) as httpresponse:

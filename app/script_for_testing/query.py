@@ -29,7 +29,7 @@ FORM_NOT_EXISTS = {
     "my_mail": "test@yandex.ru"
 }
 
-def create_query(data: dict) -> str:
+def create_query(data: dict[str, str]) -> str:
     data_list: list = []
 
     for key, value in data.items():
